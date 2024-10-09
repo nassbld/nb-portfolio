@@ -1,0 +1,16 @@
+<article>
+  <section>
+    <ul>
+      <li *ngFor="let item of items">
+        <div class="photo-side">
+          <img class="icon" [ngSrc]="item.src" alt="Photo-Etablissement" height="80" width="60" priority/>
+          <h2>{{ item.title }}</h2>
+        </div>
+        <div class="description-side">
+          <img class="logo" [ngSrc]="item.logo" alt="Logo-Etablissement" height="10" width="10" priority/>
+          <span>{{ item.description }}</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+</article>

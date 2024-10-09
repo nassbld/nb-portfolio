@@ -1,0 +1,189 @@
+@media screen and (min-width: 48rem) {
+  .main {
+    width: 100%;
+    height: 6rem;
+    background-color: transparent;
+    transition: background-color 0.3s ease, height 0.3s ease, color 0.3s ease;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    z-index: 10;
+  }
+
+  .right-side {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    i {
+      color: white;
+      transition: color 0.3s ease, scale 0.3s ease;
+    }
+
+    a:hover i {
+      scale: 1.2;
+    }
+  }
+
+  .main.scrolled {
+    background-color: darkblue;
+    color: white;
+    height: 4.5rem;
+
+    .right-side i {
+      color: white;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* absolute position the input element on top of the accompanying svg element */
+  label {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.75s ease-in-out;
+    cursor: pointer;
+  }
+  label input {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  label svg {
+    width: 100px;
+    height: auto;
+    display: block;
+  }
+  /* include transitions for the elements modified as the input is checked */
+  label input + svg .light {
+    transition: opacity 0.75s cubic-bezier(0.68, 0.25, 0.265, 1);
+  }
+  label input + svg .translate,
+  label input + svg .rotate,
+  label input + svg .background,
+  label input + svg .astronaut,
+  label input + svg .surfer {
+    transition: transform 0.75s cubic-bezier(0.68, 0.25, 0.265, 1);
+  }
+  /* make the .light element fully transparent to have the .dark variant see through */
+  label input:checked + svg .light {
+    opacity: 0;
+  }
+  /* translate the sun/moon toward the right (by default it is pushed back with a negative translation) */
+  label input:checked + svg .translate {
+    transform: translateX(0px);
+  }
+  /* rotate the moon (by default it is rotated counter-clockwise) */
+  label input:checked + svg .rotate {
+    transform: rotate(0deg);
+  }
+  /* translate the scale the backgrounds to 0
+  this is rather neat, so meant an extra comment
+  - the light background is positioned with two groups, one pushing it below the graphic, one back up; by removing the translation of this last group the background "returns" below the toggle
+  - the dark background is positioned above and with a smaller vertical scale; by removing the translation it is placed in full view and by increasing its scale it's as if the stars would tumble down with different rates
+  */
+  label input:checked + svg .background {
+    transform: translate(0px) scale(1);
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .main {
+    height: 6rem;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    z-index: 10;
+    padding: 0 1.5rem;
+
+    h2 {
+      width: 7.5rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+
+    i {
+      color: white;
+      scale: 1.3;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* absolute position the input element on top of the accompanying svg element */
+  label {
+    min-height: 10vh;
+    scale: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.75s ease-in-out;
+  }
+  label input {
+    top: 0;
+    left: 0;
+    width: 0.1rem;
+    height: 0.1rem;
+    opacity: 0;
+  }
+  label svg {
+    width: 100px;
+    height: auto;
+    display: block;
+  }
+  /* include transitions for the elements modified as the input is checked */
+  label input + svg .light {
+    transition: opacity 0.75s cubic-bezier(0.68, 0.25, 0.265, 1);
+  }
+  label input + svg .translate,
+  label input + svg .rotate,
+  label input + svg .background,
+  label input + svg .astronaut,
+  label input + svg .surfer {
+    transition: transform 0.75s cubic-bezier(0.68, 0.25, 0.265, 1);
+  }
+  /* make the .light element fully transparent to have the .dark variant see through */
+  label input:checked + svg .light {
+    opacity: 0;
+  }
+  /* translate the sun/moon toward the right (by default it is pushed back with a negative translation) */
+  label input:checked + svg .translate {
+    transform: translateX(0px);
+  }
+  /* rotate the moon (by default it is rotated counter-clockwise) */
+  label input:checked + svg .rotate {
+    transform: rotate(0deg);
+  }
+  /* translate the scale the backgrounds to 0
+  this is rather neat, so meant an extra comment
+  - the light background is positioned with two groups, one pushing it below the graphic, one back up; by removing the translation of this last group the background "returns" below the toggle
+  - the dark background is positioned above and with a smaller vertical scale; by removing the translation it is placed in full view and by increasing its scale it's as if the stars would tumble down with different rates
+  */
+  label input:checked + svg .background {
+    transform: translate(0px) scale(1);
+  }
+}

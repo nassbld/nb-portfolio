@@ -1,0 +1,48 @@
+@media screen and (min-width: 48rem) {
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: darkblue;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 48rem) {
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .scroll-to-top {
+    display: none;
+  }
+
+}
