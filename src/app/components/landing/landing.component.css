@@ -42,7 +42,7 @@
 
 @media screen and (max-width: 48rem) {
   .main {
-    height: 40rem;
+    height: 45rem;
     position: relative;
     display: flex;
     flex-direction: column;
