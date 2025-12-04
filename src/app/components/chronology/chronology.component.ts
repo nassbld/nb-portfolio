@@ -19,8 +19,9 @@ import {BackgroundColorService} from "../../services/background-color.service";
 })
 export class ChronologyComponent implements AfterViewInit, OnInit {
   items = [
-    { src: '/images/SU-photo.jpg', title: '2017-2022', logo: '/images/SU-logo.png', description: 'Licence mono-disciplinaire en informatique' },
-    { src: '/images/EFREI-photo.jpg', title: '2022-2024', logo: '/images/EFREI-logo.png', description: 'Mastère Dev Manager Full-Stack en alternance chez BNP Paribas' }
+    { src: '/images/SU-photo.jpg', title: '2017-2022', logo: '/images/SU-logo.png', description: 'Bachelor\'s degree in Computer Science (Licence informatique)' },
+    { src: '/images/EFREI-photo.jpg', title: '2022-2024', logo: '/images/EFREI-logo.png', description: 'Master\'s Degree in Full-Stack Development & Management (Mastère Dev Manager Full-Stack)' },
+    { src: '/images/dev-photo.jpg', title: '2024-Now', description: 'Freelance Software Engineer' }
   ];
 
   backgroundColor: string = '';

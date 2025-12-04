@@ -21,7 +21,7 @@
     border-radius: 10px;
     color: white;
     cursor: pointer;
-    transition: 400ms;
+    transition: 200ms;
   }
 
   .card.bnp {
@@ -30,7 +30,17 @@
     }
 
     .infotop {
-      top: 5em;
+      top: 3.5em;
+    }
+  }
+
+  .card.homework {
+    .wave {
+      background: linear-gradient(744deg, #fff8f4, #ff9a76 60%, #fff1e9);
+    }
+
+    .infotop {
+      top: 3em;
     }
   }
 
@@ -44,9 +54,9 @@
     }
   }
 
-  .card.school {
+  .card.training {
     .infotop {
-      top: 4em;
+      top: 2.5em;
     }
   }
 
@@ -198,7 +208,6 @@
     border-radius: 10px;
     color: white;
     cursor: pointer;
-    transition: 400ms;
   }
 
   .card.bnp {
@@ -207,7 +216,17 @@
     }
 
     .infotop {
-      top: 5em;
+      top: 3.5em;
+    }
+  }
+
+  .card.homework {
+    .wave {
+      background: linear-gradient(744deg, #fff8f4, #ff9a76 60%, #fff1e9);
+    }
+
+    .infotop {
+      top: 3em;
     }
   }
 
@@ -221,9 +240,9 @@
     }
   }
 
-  .card.school {
+  .card.training {
     .infotop {
-      top: 4em;
+      top: 2em;
     }
   }
 

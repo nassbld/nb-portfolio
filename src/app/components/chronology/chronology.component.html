@@ -7,7 +7,9 @@
           <h2>{{ item.title }}</h2>
         </div>
         <div class="description-side">
-          <img class="logo" [ngSrc]="item.logo" alt="Logo-Etablissement" height="10" width="10" priority/>
+          <div *ngIf="item.logo != undefined">
+            <img class="logo" [ngSrc]="item.logo" alt="Logo-Etablissement" height="10" width="10" priority/>
+          </div>
           <span>{{ item.description }}</span>
         </div>
       </li>
