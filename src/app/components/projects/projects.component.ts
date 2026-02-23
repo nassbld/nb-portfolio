@@ -21,6 +21,7 @@ import {BackgroundColorService} from "../../services/background-color.service";
 })
 export class ProjectsComponent implements OnInit {
 
+  url: string = "https://homework-frontend-mu.vercel.app/"
   backgroundColor: string = '';
 
   constructor(private backgroundColorService: BackgroundColorService) {}
@@ -29,6 +30,10 @@ export class ProjectsComponent implements OnInit {
     this.backgroundColorService.waveColor$.subscribe(color => {
       this.backgroundColor = color;
     });
+  }
+
+  openUrl() {
+    window.open(this.url, "_blank");
   }
 
 }
